@@ -11,6 +11,7 @@ To run **CmdCricket**, ensure you have the following:
 - The `tabulate` library for formatting tables. Install it via:
   ```bash
   pip install tabulate
+  pip install colorama
   
 ## How to Play
 
