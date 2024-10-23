@@ -66,6 +66,19 @@ def display_player_stats(team):
         data.append(row)
     print(tabulate(data, headers='firstrow', tablefmt='fancy_grid'))
 
+def calculate_wicket_probability(run, difficulty):
+    base_probability = 0.05 * difficulty  # Base probability for a dot ball
+
+    if run == 0:
+        return base_probability  # Dot ball, use base probability
+    elif 1 <= run <= 3:
+        return base_probability + 0.01 * run  # Small increase for 1-3 runs
+    elif run in [4, 6]:
+        return base_probability + 0.05  # Larger increase for boundaries
+    else:
+        # For runs greater than maximum (e.g., > 6), this can be adjusted based on gameplay
+        return base_probability + 0.1  # Significant increase for high runs
+
 def main():
     try:
         print(Fore.CYAN + "Welcome to the Command-Line Cricket Game!\n")
@@ -100,21 +113,17 @@ def main():
                 total_balls -= 1
                 continue
 
+            # Calculate wicket probability
+            wicket_probability = calculate_wicket_probability(run, difficulty)
+
             # Determine if it's a wicket based on run and randomness
-            if run == 0:
-                # Increase wicket chance based on difficulty and consecutive dot balls
-                if random.random() < 0.2 * difficulty:  # 20% base chance multiplied by difficulty
-                    print(Fore.RED + f"WICKET! {team.players_list[team.striker].name} is out.")
-                    team.out()
+            if random.random() < wicket_probability:  # Check against the calculated probability
+                print(Fore.RED + f"WICKET! {team.players_list[team.striker].name} is out.")
+                team.out()
             else:
-                # Implement a condition to increase the chance of getting out after scoring high runs
-                if run >= 4 and random.random() < 0.15 * difficulty:  # 5% chance after hitting a boundary
-                    print(Fore.RED + f"WICKET! {team.players_list[team.striker].name} is out after a big hit.")
-                    team.out()
-                else:
-                    team.update_score(run)
-                    if run % 2 != 0:
-                        team.swap()
+                team.update_score(run)
+                if run % 2 != 0:
+                    team.swap()
 
             # End of over
             if team.Total_bp % 6 == 0:
@@ -144,7 +153,6 @@ def main():
     except KeyboardInterrupt:
         print(Fore.RED + "\nGame interrupted by user. Exiting...")
         sys.exit()
-
 
 if __name__ == "__main__":
     main()
