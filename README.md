@@ -1,21 +1,22 @@
-CmdCricket
+```markdown
+# CmdCricket
 
-CmdCricket is a command-line cricket game where players chase a target score by batting through overs. Customize the number of players, overs, and difficulty. The game features scoring, strike rate calculations, and random wickets, providing a fun and challenging cricket experience in your terminal!
+**CmdCricket** is a fun and engaging command-line cricket game where players aim to chase a target score by batting through overs. You can customize the number of players, overs, and difficulty levels, making each game a unique experience. The game features a realistic scoring system, strike rate calculations, and randomized wickets, ensuring an exciting cricket experience directly in your terminal!
 
-Features
+## Features
 
-- Customize the number of players (2-11).
-- Set overs and difficulty level (1-5).
-- Realistic scoring system with boundaries (4s and 6s) and wickets.
-- Randomized gameplay elements based on difficulty.
-- Detailed player statistics, including strike rates and balls played.
+- **Player Customization**: Choose between 2 to 11 players.
+- **Dynamic Gameplay**: Set the number of overs and difficulty level (1-5).
+- **Realistic Scoring**: Includes boundaries (4s and 6s) and wicket management.
+- **Randomized Events**: Gameplay elements are influenced by the chosen difficulty.
+- **Detailed Statistics**: Track player performances, including strike rates and balls faced.
 
 ## Requirements
 
-To run CmdCricket, you need:
+To run **CmdCricket**, ensure you have the following:
 
-- Python 3.x
-- `tabulate` library for table formatting. Install it using:
+- **Python 3.x** installed on your machine.
+- The `tabulate` library for formatting tables. Install it via:
   ```bash
   pip install tabulate
   ```
@@ -27,7 +28,7 @@ To run CmdCricket, you need:
    git clone https://github.com/your-username/CmdCricket.git
    ```
 
-2. **Navigate to the directory**:
+2. **Navigate to the project directory**:
    ```bash
    cd CmdCricket
    ```
@@ -37,12 +38,9 @@ To run CmdCricket, you need:
    python main.py
    ```
 
-4. **Follow the prompts** to set up your game and start playing.
-
+4. **Follow the on-screen prompts** to set up your game and start playing.
 
 ## Acknowledgments
 
-- Inspired by the love of cricket and gaming.
-- Thanks to the contributors who helped shape this project.
+- Inspired by a passion for cricket and gaming.
 ```
-
