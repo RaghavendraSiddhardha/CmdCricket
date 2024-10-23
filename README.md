@@ -1,10 +1,4 @@
-```markdown
-# CmdCricket
-
-**CmdCricket** is a fun and engaging command-line cricket game where players aim to chase a target score by batting through overs. You can customize the number of players, overs, and difficulty levels, making each game a unique experience. The game features a realistic scoring system, strike rate calculations, and randomized wickets, ensuring an exciting cricket experience directly in your terminal!
-
 ## Features
-
 - **Player Customization**: Choose between 2 to 11 players.
 - **Dynamic Gameplay**: Set the number of overs and difficulty level (1-5).
 - **Realistic Scoring**: Includes boundaries (4s and 6s) and wicket management.
@@ -12,15 +6,12 @@
 - **Detailed Statistics**: Track player performances, including strike rates and balls faced.
 
 ## Requirements
-
 To run **CmdCricket**, ensure you have the following:
-
 - **Python 3.x** installed on your machine.
 - The `tabulate` library for formatting tables. Install it via:
   ```bash
   pip install tabulate
-  ```
-
+  
 ## How to Play
 
 1. **Clone the repository**:
