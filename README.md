@@ -35,4 +35,3 @@ To run **CmdCricket**, ensure you have the following:
 ## Acknowledgments
 
 - Inspired by a passion for cricket and gaming.
-```
